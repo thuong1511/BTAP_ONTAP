@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package pkg3;
+package pkg4;
 
 import java.util.Scanner;
 
@@ -15,17 +15,19 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		QuanLySach qls = new QuanLySach();
+		TuyenSinh dsTuyenSinh = new TuyenSinh();
 
-		qls.nhapDanhSachTL(sc);
+		System.out.println("Nhap vao danh sach thi sinh: ");
+		dsTuyenSinh.nhapDanhSach(sc);
 
-		System.out.print("\n\nNhap vao loai tai lieu can tim: ");
-		String loai = sc.nextLine();
-		qls.timLoaiTL(loai);
+		System.out.println("Danh sach thi sinh du thi la:");
+		dsTuyenSinh.hienThiDanhSach();
 
-		System.out.print("\n\nNhap vao ma tai lieu can tim: ");
-		String maTL = sc.nextLine();
-		qls.timMaTL(maTL);
+		System.out.print("Nhap so bao danh can tim: ");
+		int soBaoDanh = sc.nextInt();
+		sc.nextLine();
+
+		dsTuyenSinh.timKiemThiSinh(soBaoDanh);
 
 		sc.close();
 	}
