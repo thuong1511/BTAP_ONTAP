@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package pkg9;
+package pkg10;
 
 import java.util.Scanner;
 
@@ -19,11 +19,10 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 
 		QuanLy ql = new QuanLy();
-
 		ql.nhapDanhSach(sc);
 
-		System.out.println("Danh sach sinh vien tra sach vao cuoi thang:");
-		ql.hienThiDanhSachTraCuoiThang();
+		System.out.println("Danh sach bien lai cua cac ho gia dinh la:");
+		ql.hienThiDanhSach();
 
 		sc.close();
 	}
