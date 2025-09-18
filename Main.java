@@ -1,36 +1,26 @@
-package pkg1;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package pkg2;
 
 import java.util.Scanner;
 
+/**
+ *
+ * @author THUONG
+ */
 public class Main {
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        PhanSo ps1= new PhanSo();
-        PhanSo ps2= new PhanSo();
-
-        System.out.println("Nhap vao phan so thu nhat:");
-        ps1.Nhap(sc);
-        System.out.println("Nhap vao phan so thu hai:");
-        ps2.Nhap(sc);
-
-        PhanSo psTong = ps1.congPS(ps2);	
-        PhanSo psHieu = ps1.truPS(ps2);
-        PhanSo psTich = ps1.nhanPS(ps2);
-        PhanSo psThuong = ps1.chiaPS(ps2);
-
-        System.out.println("\nPhan so thu nhat la:");
-        ps1.hienthi();
-        System.out.println("Phan so thu hai la:");
-        ps2.hienthi();
-        System.out.println("Tong hai phan so la:");
-        psTong.hienthi();
-        System.out.println("Hieu hai phan so la:");
-        psHieu.hienthi();
-        System.out.println("Tich hai phan so la:");
-        psTich.hienthi();
-        System.out.println("Thuong hai phan so la:");
-        psThuong.hienthi();
-
-        sc.close();      
-    } 
+    /**
+     * @param args the command line arguments
+     */
+   public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	QLCB qlcb = new QLCB();
+	qlcb.nhapDanhSach(sc);
+	System.out.print("Nhap vao ho ten can tim kiem: ");
+	String name = sc.nextLine();
+	qlcb.timKiemCanBo(name);
+ 	sc.close();
+    }
 }
